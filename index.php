@@ -9,7 +9,9 @@
     <div class=" col-sm-8 col-md-10 col-xs-1">
 
         <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
-            
+            <cente>
+            <h1>Video</h1>
+            </cente>
             <center>
                 <div class="embed-responsive embed-responsive-4by3">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=ZFLQCd3ohIY"></iframe>
