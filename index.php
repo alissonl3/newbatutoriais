@@ -37,8 +37,10 @@
         </div>
         
          <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
-            <p>
-                Terceira parte
+             <p>
+            <center><p style="font-size: 30px;">Últimos Vídeos</p></center>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/myfORvFqnXw" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TThxnNCCDPg" frameborder="0" allowfullscreen></iframe>
             </p> 
         </div>
         
