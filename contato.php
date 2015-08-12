@@ -1,18 +1,59 @@
   <?php require './template/topo.php'; ?>
            
     <!-- Pagina do conteudo -->
-    <div class="row" style="margin-top: 12%; margin-bottom: 10%;">
-    <div class="col-md-4 col-sm-3 col-xs-2"></div>
-    <div class="col-md-4 col-sm-6 col-xs-8">
+    <div class="row" style="margin-top: 1%; margin-bottom: 5%;">
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-md-10 col-sm-10 col-xs-10">
         
-        <div class="jumbotron" style=" background: white; border: 2px greenyellow solid; ">
-            <p>
-                Nosso contato!
+        <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
+            <center>
+            <h2>Contato</h2>
+            
+             <p>
+               Qualquer dúvida entre em contato com um de nossos administradores!
             </p>
-        </div>
+            
+            </center>
+            
+            <table class="table table-striped">
+                <tr>
+                    <th><img  src="./resources/img/user.png" alt="Administradores" class="img-resposive" /></th>
+                    <th>Alisson Lopes</th>
+                    <th>Alan Lopes</th>
+                    <th>Abner Moura</th>
+               </tr>
+               <tr>
+                   <th><img  src="./resources/img/facebook.png" alt="Facebook" class="img-resposive" /></th>
+                    <th>Alisson Lopes</th>
+                    <th>Alan Lopes</th>
+                    <th>Abner Moura</th>
+               </tr>
+               <tr>
+                   <th><img  src="./resources/img/gmail.png" alt="Gmail" class="img-resposive" /></th>
+                    <th>alissonlopes3@gmail.com</th>
+                    <th>alanlopes4@gmail.com</th>
+                    <th>Abner Moura</th>
+               </tr>
+               <tr>
+                   <th><img  src="./resources/img/whats.png" alt="Whatsapp" class="img-resposive" /></th>
+                    <th>(44) 9117-0573</th>
+                    <th>Alan Lopes</th>
+                    <th>Abner Moura</th>
+               </tr>
+               <tr>
+                   <th><img  src="./resources/img/skype.png" alt="Skype" class="img-resposive" /></th>
+                    <th>alissontuning</th>
+                    <th>Alan Lopes</th>
+                    <th>Abner Moura</th>
+               </tr>
+                
+            </table>   
+         
+       </div>
+       
         
     </div>
-    <div class="col-md-4 col-sm-3 col-xs-2"></div>
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
     </div>  
         
     <?php require './template/rodape.php'; ?>

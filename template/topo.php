@@ -28,9 +28,9 @@
 
                                 <ul class="nav navbar-nav navbar-right" >
                                     <li><a href="index.php"><span class="glyphicon glyphicon-home" style="color: teal;">Home</span></a></li>
-                                    <li><a href="index.php"><span class="glyphicon glyphicon-film" style="color: teal;">Canal</span></a></li>
-                                    <li><a href="index.php"><span class="glyphicon glyphicon-user" style="color: teal;">Quem Somos</span></a></li>
-                                    <li><a href="index.php"><span class="glyphicon glyphicon-book" style="color: teal;">Contato</span></a></li>
+                                    <li><a href="canal.php"><span class="glyphicon glyphicon-film" style="color: teal;">Canal</span></a></li>
+                                    <li><a href="quemsomos.php"><span class="glyphicon glyphicon-user" style="color: teal;">Quem Somos</span></a></li>
+                                    <li><a href="contato.php"><span class="glyphicon glyphicon-book" style="color: teal;">Contato</span></a></li>
                                 </ul>
                             </div>
              
