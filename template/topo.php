@@ -1,6 +1,6 @@
 <html >
 <head>
-  <title>Questionário de Egressos</title>
+  <title>Newba Tutoriais</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../resources/css/base.css" type="text/css" />
