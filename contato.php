@@ -37,13 +37,13 @@
                <tr>
                    <th><img  src="./resources/img/whats.png" alt="Whatsapp" class="img-resposive" /></th>
                     <th>(44) 9117-0573</th>
-                    <th>Alan Lopes</th>
+                    <th>(44) 9174-8458</th>
                     <th>Abner Moura</th>
                </tr>
                <tr>
                    <th><img  src="./resources/img/skype.png" alt="Skype" class="img-resposive" /></th>
                     <th>alissontuning</th>
-                    <th>Alan Lopes</th>
+                    <th>alanmax732</th>
                     <th>Abner Moura</th>
                </tr>
                 
