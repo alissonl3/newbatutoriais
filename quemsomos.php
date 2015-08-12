@@ -16,20 +16,22 @@
             <p style="text-align: justify;">
                O canal Newba Tutoriais e Dicas foi criado em xx/xx/xx por Alisson Lopes e Abner Moura, com
                o objetivo de auxiliar pessoas com tutoriais básicos, programação, designer, etc. O canal conta
-               com quase 500 inscritos atualmente e tende a crescer. 
+               com quase 500 inscritos, atualmente, e tende a crescer. 
             </p>
             
             <h2>Alisson Lopes</h2>
             
              <p style="text-align: justify;">
-               Descrição sobre Alisson Lopes!
-            </p>
+                 Olá! Sou estudante do IFPR - Campus Paranavaí, atualmente, curso Técnico Informática e sou programador.
+                 Fascinado pelo mundo virtual, desde pequeno, explorando esse universo mágico e, consequentemente, trazendo 
+                 a vocês dicas, tutoriais, facilidades e muito mais.
+             </p>
             
             <h2>Abner Moura</h2>
             
              <p style="text-align: justify;">
-               Descrição sobre Abner Moura!
-            </p>
+                 Olá! Sou estudante do Nobel, viciado em tecnologia e sempre buscando inovações. 
+             </p>
             
             
             
