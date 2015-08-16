@@ -35,10 +35,12 @@
                 Segunda parte newba
             </p> 
         </div>
-        
+    
+    
          <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
-            
+             
             <center><h3>Últimos Vídeos</h3></center>
+            <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6" >
                 <div class="embed-responsive embed-responsive-4by3">
             <iframe  src="https://www.youtube.com/embed/myfORvFqnXw" frameborder="0" allowfullscreen></iframe>
@@ -48,8 +50,10 @@
                 <div class="embed-responsive embed-responsive-4by3">
             <iframe  src="https://www.youtube.com/embed/TThxnNCCDPg" frameborder="0" allowfullscreen></iframe>
                 </div>
-                </div>
+            </div>
+            </div>
         </div>
+    
         
     </div>
     <div class="col-sm-2  col-md-1 col-xs-1"></div>
