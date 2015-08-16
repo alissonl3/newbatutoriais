@@ -18,7 +18,7 @@ class DaoAdm{
     public function getNextID(){
         try{
             
-            $sql = "SELECT Auto_increment FROM information_schema.tables WHERE table_name='usuario'";
+            $sql = "SELECT Auto_increment FROM information_schema.tables WHERE table_name='adm'";
             $result = $this->pdo->query($sql);
             $final_result = $result->fetch(PDO::FETCH_ASSOC); 
             return $final_result['Auto_increment'];
@@ -31,38 +31,27 @@ class DaoAdm{
     }
 
 
-    public function inserir(Adm $usuario){
+    public function inserir(Adm $adm){
         try{
             
-            $sql = "INSERT INTO usuario("
+            $sql = "INSERT INTO adm("
                     . "nome,"
                     . "email,"
                     . "telefone,"
-                    . "senha,"
-                    . "emailEnviado,"
-                    . "respondeu,"
-                    . "dataEnvio,"
-                    . "idFormulario"                    
+                    . "senha"                  
                     . ") VALUES ("
                     . ":nome,"
                     . ":email,"
                     . ":telefone,"
-                    . ":senha,"
-                    . ":emailEnviado,"
-                    . ":respondeu,"
-                    . ":dataEnvio,"
-                    . ":idFormulario)";
+                    . ":senha)";
             
             $p_sql = $this->pdo->prepare($sql);
             
-            $p_sql -> bindValue(":nome", $usuario->getNome());
-            $p_sql -> bindValue(":email", $usuario->getEmail());
-            $p_sql -> bindValue(":telefone", $usuario->getTelefone());
-            $p_sql -> bindValue(":senha", $usuario->getSenha());
-            $p_sql -> bindValue(":emailEnviado", $usuario->getEmailEnviado());
-            $p_sql -> bindValue(":respondeu", $usuario->getRespondeu());
-            $p_sql -> bindValue(":dataEnvio", $usuario->getDataEnvio());
-            $p_sql -> bindValue(":idFormulario", $usuario->getIdFormulario());
+            $p_sql -> bindValue(":nome", $adm->getNome());
+            $p_sql -> bindValue(":email", $adm->getEmail());
+            $p_sql -> bindValue(":telefone", $adm->getTelefone());
+            $p_sql -> bindValue(":senha", $adm->getSenha());
+          
             
             return $p_sql->execute();
          
@@ -76,19 +65,15 @@ class DaoAdm{
         
     }
     
-    public function editarComSenha(Adm $usuario) { 
+    public function editarComSenha(Adm $adm) { 
         try { 
-            $sql = "UPDATE usuario SET nome = :nome, email = :email, emailEnviado = :emailEnviado, respondeu = :respondeu, telefone = :telefone, senha = :senha, dataEnvio = :dataEnvio, idFormulario = :idFormulario WHERE id = :id"; 
+            $sql = "UPDATE adm SET nome = :nome, email = :email, telefone = :telefone, senha = :senha WHERE id = :id"; 
             $p_sql = $this->pdo->prepare($sql); 
-            $p_sql->bindValue(":nome", $usuario->getNome()); 
-            $p_sql->bindValue(":email", $usuario->getEmail()); 
-            $p_sql->bindValue(":idFormulario", $usuario->getIdFormulario()); 
-            $p_sql->bindValue(":senha", $usuario->getSenha()); 
-            $p_sql->bindValue(":telefone", $usuario->getTelefone()); 
-            $p_sql->bindValue(":id", $usuario->getId()); 
-            $p_sql->bindValue(":emailEnviado", $usuario->getEmailEnviado()); 
-            $p_sql->bindValue(":dataEnvio", $usuario->getDataEnvio());
-            $p_sql->bindValue(":respondeu", $usuario->getRespondeu());  
+            $p_sql->bindValue(":nome", $adm->getNome()); 
+            $p_sql->bindValue(":email", $adm->getEmail()); 
+            $p_sql->bindValue(":senha", $adm->getSenha()); 
+            $p_sql->bindValue(":telefone", $adm->getTelefone()); 
+            $p_sql->bindValue(":id", $adm->getId()); 
             return $p_sql->execute(); 
             
         } catch (Exception $e) { 
@@ -100,9 +85,9 @@ class DaoAdm{
 
     public function alterarSenha($id, $senha_antiga, $senha_nova) { 
         try { 
-            $user = $this->BuscarPorCOD($id); 
-            if ($user->getSenha() == md5(trim(strtolower($senha_antiga)))) { 
-                $sql = "UPDATE usuario set senha = :senha_nova WHERE id = :id and senha = :senha_antiga"; 
+            $adm = $this->BuscarPorCOD($id); 
+            if ($adm->getSenha() == md5(trim(strtolower($senha_antiga)))) { 
+                $sql = "UPDATE adm set senha = :senha_nova WHERE id = :id and senha = :senha_antiga"; 
                 $p_sql = $this->pdo->prepare($sql); 
                 $p_sql->bindValue(":senha_nova", md5(trim(strtolower($senha_nova)))); 
                 $p_sql->bindValue(":senha_antiga", md5(trim(strtolower($senha_antiga)))); 
@@ -123,32 +108,25 @@ class DaoAdm{
             }
 
     
-    public function atualizar(Adm $usuario){
+    public function atualizar(Adm $adm){
         
         try{
             
-            $sql = "UPDATE usuario SET "
+            $sql = "UPDATE adm SET "
                     . "nome = :nome,"
                     . "email = :email,"
                     . "telefone = :telefone,"
-                    . "senha = :senha,"
-                    . "respondeu = :respondeu,"
-                    . "emailEnviado = :emailEnviado,"
-                    . "dataEnvio = :dataEnvio,"
-                    . "idFormulario = :idFormulario "
+                    . "senha = :senha "
                     . "WHERE id = :id";
             
             $p_sql = $this->pdo->prepare($sql);
             
-            $p_sql -> bindValue(":id", $usuario->getId());
-            $p_sql -> bindValue(":nome", $usuario->getNome());
-            $p_sql -> bindValue(":email", $usuario->getEmail());
-            $p_sql -> bindValue(":telefone", $usuario->getTelefone());
-            $p_sql -> bindValue(":senha", $usuario->getSenha());
-            $p_sql -> bindValue(":emailEnviado", $usuario->getEmailEnviado());
-            $p_sql -> bindValue(":respondeu", $usuario->getRespondeu());
-            $p_sql->bindValue(":dataEnvio", $usuario->getDataEnvio());
-            $p_sql -> bindValue(":idFormulario", $usuario->getIdFormulario());
+            $p_sql -> bindValue(":id", $adm->getId());
+            $p_sql -> bindValue(":nome", $adm->getNome());
+            $p_sql -> bindValue(":email", $adm->getEmail());
+            $p_sql -> bindValue(":telefone", $adm->getTelefone());
+            $p_sql -> bindValue(":senha", $adm->getSenha());
+
             
             return $p_sql->execute();
             
@@ -168,7 +146,7 @@ class DaoAdm{
         
         try{
             
-            $sql = "DELETE FROM usuario WHERE id = :id";
+            $sql = "DELETE FROM adm WHERE id = :id";
             $p_sql  = $this->pdo->prepare($sql);
             $p_sql -> bindValue(":id", $id);
             
@@ -187,7 +165,7 @@ class DaoAdm{
     public function alterarSenhaAlreadyCripted($id, $senha_nova_md5) { 
         try {
             
-            $sql = "UPDATE usuario SET senha = :senha_nova WHERE id = :id"; 
+            $sql = "UPDATE adm SET senha = :senha_nova WHERE id = :id"; 
             $p_sql = $this->pdo->prepare($sql);
             $p_sql->bindValue(":senha_nova", $senha_nova_md5); 
             $p_sql->bindValue(":id", $id);
@@ -206,7 +184,7 @@ class DaoAdm{
         
          try{
             
-            $sql = "SELECT * FROM usuario WHERE email = :email AND senha = :senha";
+            $sql = "SELECT * FROM adm WHERE email = :email AND senha = :senha";
             $p_sql = $this->pdo->prepare($sql);
             $p_sql -> bindValue(":email", $email);
             $p_sql -> bindValue(":senha", $senha);
@@ -228,7 +206,7 @@ class DaoAdm{
         
          try{
             
-            $sql = "SELECT * FROM usuario WHERE email = :email AND senha = :senha";
+            $sql = "SELECT * FROM adm WHERE email = :email AND senha = :senha";
             $p_sql = $this->pdo->prepare($sql);
             $p_sql -> bindValue(":email", $email);
             $p_sql -> bindValue(":senha", $senha);
@@ -251,7 +229,7 @@ class DaoAdm{
         
            try{
             
-            $sql = "SELECT * FROM usuario WHERE id = :id";
+            $sql = "SELECT * FROM adm WHERE id = :id";
             $p_sql = $this->pdo->prepare($sql);
             $p_sql -> bindValue(":id", $id);
             $p_sql->execute();
@@ -273,7 +251,7 @@ class DaoAdm{
         
            try{
             
-            $sql = "SELECT * FROM usuario ORDER BY nome";
+            $sql = "SELECT * FROM adm ORDER BY nome";
             $result = $this->pdo->query($sql);
             $lista = $result->fetchAll(PDO::FETCH_ASSOC);
             $f_lista = array();
@@ -293,18 +271,15 @@ class DaoAdm{
     }
     
     private function populaUsuario($row){
-        $user = new Adm();
-        $user ->setId($row['id']);
-        $user ->setNome($row['nome']);
-        $user ->setEmail($row['email']);
-        $user ->setSenha($row['senha']);
-        $user ->setTelefone($row['telefone']);
-        $user ->setEmailEnviado($row['emailEnviado']);
-        $user ->setRepondeu($row['respondeu']);
-        $user ->setDataEnvio($row['dataEnvio']);
-        $user ->setIdFormulario($row['idFormulario']);
+        $adm = new Adm();
+        $adm ->setId($row['id']);
+        $adm ->setNome($row['nome']);
+        $adm ->setEmail($row['email']);
+        $adm ->setSenha($row['senha']);
+        $adm ->setTelefone($row['telefone']);
+
         
-        return $user;
+        return $adm;
     }
     
     
