@@ -11,7 +11,7 @@
         <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
             <center>
                 <div class="embed-responsive embed-responsive-4by3">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
+                    <iframe  src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
                 </div>
             </center>
             
@@ -37,11 +37,18 @@
         </div>
         
          <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
-             <p>
-            <center><p style="font-size: 30px;">Últimos Vídeos</p></center>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/myfORvFqnXw" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TThxnNCCDPg" frameborder="0" allowfullscreen></iframe>
-            </p> 
+            
+            <center><h3>Últimos Vídeos</h3></center>
+            <div class="col-md-6 col-sm-6 col-xs-6" >
+                <div class="embed-responsive embed-responsive-4by3">
+            <iframe  src="https://www.youtube.com/embed/myfORvFqnXw" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
+            <div class="col-md-6 col-sm-6 col-xs-6" >
+                <div class="embed-responsive embed-responsive-4by3">
+            <iframe  src="https://www.youtube.com/embed/TThxnNCCDPg" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
         </div>
         
     </div>
