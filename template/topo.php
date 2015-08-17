@@ -47,12 +47,12 @@
             <h4 class="modal-title">Entrar</h4>
           </div>
           <div class="modal-body">
-              <fieldset>
-                <legend>Login</legend>
-                <h5 style="color: graytext;">
-                    Informe seu e-mail e sua senha
-                </h5>
-                <hr />
+              
+              <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Login</h3>
+            </div>
+            <div class="panel-body">
                 <form action="#" method="POST" role="form" >
                     <div class="form-group">
                         <label  for="email">Seu email:</label>
@@ -73,7 +73,8 @@
                         </div>
                     </center>
                 </form>
-            </fieldset> 
+            </div>
+        </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
