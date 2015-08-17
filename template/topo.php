@@ -31,19 +31,104 @@
 <!--                                    <li><a href="canal.php"><span class="glyphicon glyphicon-film" style="color: teal;">Canal</span></a></li>-->
                                     <li><a href="quemsomos.php"><span class="glyphicon glyphicon-user" style="color: teal;">Quem Somos</span></a></li>
                                     <li><a href="contato.php"><span class="glyphicon glyphicon-book" style="color: teal;">Contato</span></a></li>
+                                     <li><a href="#"><span class="glyphicon glyphicon-share" data-toggle="modal"  data-target="#modalLogin" style="color: teal;">Entrar</span></a></li>
                                 </ul>
                             </div>
+       
+       
+         <!-- Modal -->
+    <div id="modalLogin" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Entrar</h4>
+          </div>
+          <div class="modal-body">
+              <fieldset>
+                <legend>Login</legend>
+                <h5 style="color: graytext;">
+                    Informe seu e-mail e sua senha
+                </h5>
+                <hr />
+                <form action="#" method="POST" role="form" >
+                    <div class="form-group">
+                        <label  for="email">Seu email:</label>
+                        <input type="email" required="true" placeholder="Insere o seu email" class="form-control" id="email" name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Sua senha:</label>
+                        <input type="password" required="true" placeholder="Insere sua senha" class="form-control" id="senha" name="senha" />
+                    </div>
+                    <center>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                Logar</button> 
+                            <button type="reset" class="btn btn-danger btn-lg">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                Limpar</button>                        
+                        </div>
+                    </center>
+                </form>
+            </fieldset> 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
              
   </div>
 </nav> 
 </div>
 </div>  
 
-<div class="row">
+<!--<div class="row">
     
     <div class="col-md-12 col-sm-12 col-xs-12">
         <img src="./resources/img/header.png" alt="Newba Tutoriais e Dicas" class="img-rounded img-responsive" />
         
+    </div>
+</div>-->
+
+<div class="row" style="margin-top: 1%; margin-bottom: 1%;">
+    
+    <div class="col-md-12 col-sm-12 col-xs-12">      
+    <div id="newbaCorousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#newbaCorousel" data-slide-to="0" class="active"></li>
+            <li data-target="#newbaCorousel" data-slide-to="1"></li>
+            <li data-target="#newbaCorousel" data-slide-to="2"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="./resources/img/header.png" alt="Newba Tutoriais e Dicas" class="img-rounded img-responsive" />
+         
+            </div>
+            <div class="item">
+                <img src="./resources/img/header2.png" alt="Newba Tutoriais e Dicas" class="img-rounded img-responsive" />
+
+            </div>
+            <div class="item">
+                <img src="./resources/img/header3.png" alt="Newba Tutoriais e Dicas" class="img-rounded img-responsive" />
+  
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#newbaCorousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#newbaCorousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
     </div>
 </div>
 
