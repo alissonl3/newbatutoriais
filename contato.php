@@ -21,31 +21,31 @@
             
             <table class="table table-striped">
                 <tr>
-                    <th><img  src="./resources/img/user.png" alt="Administradores" class="img-resposive" /></th>
+                    <th><img  src="./resources/img/user.png" alt="Administradores" class="img-responsive" /></th>
                     <th>Alisson Lopes</th>
                     <th>Alan Lopes</th>
                     <th>Abner Moura</th>
                </tr>
                <tr>
-                   <th><img  src="./resources/img/facebook.png" alt="Facebook" class="img-resposive" /></th>
+                   <th><img  src="./resources/img/facebook.png" alt="Facebook" class="img-responsive" /></th>
                     <th>Alisson Lopes</th>
                     <th>Alan Lopes</th>
                     <th>Abner Moura</th>
                </tr>
                <tr>
-                   <th><img  src="./resources/img/gmail.png" alt="Gmail" class="img-resposive" /></th>
+                   <th><img  src="./resources/img/gmail.png" alt="Gmail" class="img-responsive" /></th>
                     <th>alissonlopes3@gmail.com</th>
                     <th>alanlopes4@gmail.com</th>
                     <th>Abner Moura</th>
                </tr>
                <tr>
-                   <th><img  src="./resources/img/whats.png" alt="Whatsapp" class="img-resposive" /></th>
+                   <th><img  src="./resources/img/whats.png" alt="Whatsapp" class="img-responsive" /></th>
                     <th>(44) 9117-0573</th>
                     <th>(44) 9174-8458</th>
                     <th>Abner Moura</th>
                </tr>
                <tr>
-                   <th><img  src="./resources/img/skype.png" alt="Skype" class="img-resposive" /></th>
+                   <th><img  src="./resources/img/skype.png" alt="Skype" class="img-responsive" /></th>
                     <th>alissontuning</th>
                     <th>alanmax732</th>
                     <th>Abner Moura</th>
