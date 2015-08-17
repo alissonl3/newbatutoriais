@@ -20,8 +20,8 @@
             </center>
             <p style="text-align: justify;">
                Newba Tutoriais e Dicas é um canal que tem o intuito de auxiliar pessoas
-               nas diversar areas de informática, com tutoriais básicos, de instalações, recomendações,
-               designer, programação, etc... Venha fazer parte dessa família você também, inscreva-se em nosso canal
+               nas diversar áreas da informática, com tutoriais básicos de instalações, recomendações,
+               designer, programação, etc. Venha fazer parte dessa família você também, inscreva-se em nosso canal
                clicando no icone do youtube.
             </p>
             <center>
@@ -31,9 +31,20 @@
         </div>
         
         <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
-            <p>
-                Segunda parte newba
-            </p> 
+            <center><h3>Mais visitados</h3></center>
+            <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6" >
+                <div class="embed-responsive embed-responsive-4by3">
+                <iframe  src="https://www.youtube.com/embed/VXv0EIIqo90" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
+            <div class="col-md-6 col-sm-6 col-xs-6" >
+                <div class="embed-responsive embed-responsive-4by3">
+                <iframe  src="https://www.youtube.com/embed/4bEmVHn6Q2A" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            </div>
+          
         </div>
     
     
