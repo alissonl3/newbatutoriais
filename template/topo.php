@@ -31,7 +31,8 @@
 <!--                                    <li><a href="canal.php"><span class="glyphicon glyphicon-film" style="color: teal;">Canal</span></a></li>-->
                                     <li><a href="quemsomos.php"><span class="glyphicon glyphicon-user" style="color: teal;">Quem Somos</span></a></li>
                                     <li><a href="contato.php"><span class="glyphicon glyphicon-book" style="color: teal;">Contato</span></a></li>
-                                     <li><a href="#"><span class="glyphicon glyphicon-share" data-toggle="modal"  data-target="#modalLogin" style="color: teal;">Entrar</span></a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-volume-up" data-toggle="modal"  data-target="#modalMusica" style="color: teal;">Radio</span></a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-share" data-toggle="modal"  data-target="#modalLogin" style="color: teal;">Entrar</span></a></li>
                                 </ul>
                             </div>
        
@@ -39,7 +40,6 @@
          <!-- Modal -->
     <div id="modalLogin" class="modal fade" role="dialog">
       <div class="modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -74,6 +74,32 @@
                     </center>
                 </form>
             </fieldset> 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+         
+         
+               <!-- Modal -->
+    <div id="modalMusica" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Radio</h4>
+          </div>
+          <div class="modal-body">
+             <div style="background: url(resources/img/musica.jpg); background-size: cover; min-height: 50px; padding-bottom: 1%; padding-top: 1%; ">
+                      <center>
+                        <iframe src='http://player.dyb.fm/radiodyb?theme=miniColorful&backgroundColor=ffffff&chromeColor=1434b3&fontColor=ffffff&play=1'
+                        style='width:200px; height:80px;border:0;' frameborder='0' allowtransparency='true'></iframe>
+                      </center>
+            </div>  
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>

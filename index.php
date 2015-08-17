@@ -7,8 +7,7 @@
     <div class="row" style="margin-top: 1%; margin-bottom: 5%;">
     <div class="col-md-1 col-sm-1 col-xs-1"></div>
     <div class="col-md-10 col-sm-10 col-xs-10">
-        
-        
+       
         
         <!-- COMENTARIO -->
         <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
@@ -170,7 +169,7 @@
             </div>
         </div>
     
-        
+
     </div>
     <div class="col-sm-2  col-md-1 col-xs-1"></div>
 </div>  

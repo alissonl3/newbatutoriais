@@ -6,13 +6,17 @@
     <div class="col-md-10 col-sm-10 col-xs-10">
         
         <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
-            <center>
-            <h2>Contato</h2>
             
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Contato</h3>
+            </div>
+            <div class="panel-body" style="text-align: justify;">
+                
+                <center>     
              <p>
                Qualquer dúvida entre em contato com um de nossos administradores!
-            </p>
-            
+            </p>       
             </center>
             
             <table class="table table-striped">
@@ -48,7 +52,10 @@
                </tr>
                 
             </table>   
-         
+               
+            </div>
+        </div>
+
        </div>
        
         
