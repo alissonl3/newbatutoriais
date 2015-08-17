@@ -30,7 +30,8 @@
             <h2>Abner Moura</h2>
             
              <p style="text-align: justify;">
-                 Olá! Sou estudante do Nobel, viciado em tecnologia e sempre buscando inovações. 
+                 Olá! Sou estudante do Nobel, viciado em tecnologia e sempre buscando inovações. Trago a vocês as mais atualizadas
+                  infomações sobre os mais recentes programas, jogos e muito mais.
              </p>
             
             
