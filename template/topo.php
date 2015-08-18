@@ -28,7 +28,6 @@
 
                                 <ul class="nav navbar-nav navbar-right" >
                                     <li><a href="index.php"><span class="glyphicon glyphicon-home" style="color: teal;">Home</span></a></li>
-<!--                                    <li><a href="canal.php"><span class="glyphicon glyphicon-film" style="color: teal;">Canal</span></a></li>-->
                                     <li><a href="quemsomos.php"><span class="glyphicon glyphicon-user" style="color: teal;">Quem Somos</span></a></li>
                                     <li><a href="contato.php"><span class="glyphicon glyphicon-book" style="color: teal;">Contato</span></a></li>
                                     <li><a href="#"><span class="glyphicon glyphicon-volume-up" data-toggle="modal"  data-target="#modalMusica" style="color: teal;">Radio</span></a></li>
@@ -53,7 +52,7 @@
                 <h3 class="panel-title">Login</h3>
             </div>
             <div class="panel-body">
-                <form action="../visao/login.php" method="POST" role="form" >
+                <form action="./visao/login.php" method="POST" role="form" >
                     <div class="form-group">
                         <label  for="email">Seu email:</label>
                         <input type="email" required="true" placeholder="Insere o seu email" class="form-control" id="email" name="email" />
@@ -72,7 +71,7 @@
                                 Limpar</button>                        
                         </div>
                     </center>
-                </form>
+                </form>              
             </div>
         </div>
           </div>
@@ -114,14 +113,6 @@
 </nav> 
 </div>
 </div>  
-
-<!--<div class="row">
-    
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <img src="./resources/img/header.png" alt="Newba Tutoriais e Dicas" class="img-rounded img-responsive" />
-        
-    </div>
-</div>-->
 
 <div class="row" style="margin-top: 1%; margin-bottom: 1%;">
     

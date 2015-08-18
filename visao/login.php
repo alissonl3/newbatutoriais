@@ -1,6 +1,6 @@
 <?php
 
-
+    
 include_once  '../dao/DaoAdm.php';
 include_once '../entidades/Adm.php';
 include_once '../banco/Conexao.php';
@@ -46,7 +46,7 @@ else
     echo "<script type='text/javascript'>";
     
         echo "alert('Login ou senha incorretos. Tente novamente.');";
-        echo "location.href='http://localhost/questionario/index.php';";
+        echo "location.href='http://localhost/newbatutoriais/index.php';";
 
     echo "</script>";
   

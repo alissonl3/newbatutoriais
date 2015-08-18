@@ -17,13 +17,13 @@
                         <h3 class="panel-title">Seja Bem Vindo ao Newba Turoriais e Dicas</h3>
                     </div>
                     <div class="panel-body">
-                        <center>
+                     
                             <center>
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <iframe  src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </center>
-                        </center>
+                      
                         <br />
                         
                         <div style="text-align: justify;">
