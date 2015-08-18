@@ -16,10 +16,7 @@
         if ((!isset($_SESSION['email']) == true) and ( !isset($_SESSION['senha']) == true)) {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
-            header('location:http://localhost/questionario/index.php');
-        }
-        if($_SESSION['tipo'] === "user"){
-             header('location:http://localhost/questionario/index.php');
+            header('location:http://localhost/newbatutoriais/index.php');
         }
 
         $logado = $_SESSION['nome'];
@@ -44,7 +41,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span> 
                                 </button>
-                                <a class="navbar-brand" style="color: teal;" href="#"><img  src="../resources/img/questionario_logo.png" alt="Questionário de Egressos" class="img-resposive" /></a>
+                                <a class="navbar-brand" style="color: teal;" href="#"><img  src="../resources/img/logo.png" alt="Newba Tutoriais e Dicas" class="img-resposive" /></a>
                             </div>
                             <div class="collapse navbar-collapse" id="navBarUser">
 

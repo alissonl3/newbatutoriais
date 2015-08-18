@@ -174,5 +174,5 @@
     <div class="col-sm-2  col-md-1 col-xs-1"></div>
 </div>  
 
-<?php require './template/rodape.php'; ?>
+<?php require './template/rodape.php';?>
 

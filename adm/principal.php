@@ -1,27 +1,42 @@
   <?php require '../template/topoadm.php'; ?>
            
     <!-- Pagina do conteudo -->
-    <div class="row" style="margin-top: 8%; margin-bottom: 10%;">
-    <div class="col-md-2 col-sm-1 col-xs-2"></div>
-    <div class="col-md-4 col-sm-5 col-xs-12" >
-        <center>
-        <div class="jumbotron" style=" background: white; border: 2px greenyellow solid;">
-        <img src="../resources/img/formu.png" width="200px" height="200px" class="img-resposive"/>
-        <h5  style="color: graytext;">Gerenciar</h5>
-        <a href="gerenciar.php" title="Gerenciar" class="btn btn-success btn-lg">Gerenciar</a>
-        </div>
-        </center>
+    <div class="row" style="margin-top: 1%; margin-bottom: 5%;">
+        
+    <div class="col-md-4 col-sm-12 col-xs-4">
+       <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Administrar</h3>
+                    </div>
+                    <div class="panel-body">
+                     Corpo
+                    </div>
+       </div>     
     </div>
-    <div class="col-md-4 col-sm-5 col-xs-12" >
-        <center>
-            <div class="jumbotron" style=" background: white; border: 2px greenyellow solid;">
-            <img src="../resources/img/lupa.png" width="200px" height="200px" class="img-resposive"/>
-            <h5 style="color: graytext;">Ver respostas</h5>
-            <a href="respostas.php" title="Ver os resultados" class="btn btn-success btn-lg">Visualizar</a>
-            </div>
-        </center>
+    <div class="col-md-4 col-sm-12 col-xs-4" >
+        <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Visualizar</h3>
+                    </div>
+                    <div class="panel-body">
+                     Corpo
+                    </div>
+       </div> 
+       
     </div>
-    <div class="col-md-2 col-sm-1 col-xs-2"></div>
+    <div class="col-md-4 col-sm-12 col-xs-4" >
+        
+        <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Criar</h3>
+                    </div>
+                    <div class="panel-body">
+                     Corpo
+                    </div>
+       </div> 
+        
+    </div>
+
     </div>  
         
     <?php require '../template/rodape.php'; ?>

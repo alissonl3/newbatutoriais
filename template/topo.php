@@ -53,7 +53,7 @@
                 <h3 class="panel-title">Login</h3>
             </div>
             <div class="panel-body">
-                <form action="#" method="POST" role="form" >
+                <form action="../visao/login.php" method="POST" role="form" >
                     <div class="form-group">
                         <label  for="email">Seu email:</label>
                         <input type="email" required="true" placeholder="Insere o seu email" class="form-control" id="email" name="email" />
