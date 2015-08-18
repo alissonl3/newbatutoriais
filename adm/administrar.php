@@ -15,42 +15,48 @@ $listaUsuarios = $daoUsuario->buscarTodos();
 <div class="row" style="margin-top: 1%; margin-bottom: 1%;">
     <div class="col-md-2 col-sm-2 col-xs-2"></div>
     <div class="col-md-8 col-sm-8 col-xs-8" >
-    <div class="jumbotron" style=" background: white;">
-            <center>
-                <h3><label>Gerenciar</label></h3>
-                <br />
-                <br />
-            </center>
+    <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
+            
+         <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Dados</h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                         <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Nome</th>
+                            <th>Ação</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <?php 
 
-    <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Ação</th>
-      </tr>
-    </thead>
-    <tbody>
-    <?php 
 
-    
-    foreach ($listaUsuarios as $usuario) {
-        echo '<tr>';
-            echo '<td>';
-                echo  $usuario->getNome();
-            echo '</td>';
-            echo '<td>';
-            echo "<div class='btn-group'>";
-                echo   '<a href="dados.php?id='.$usuario->getId().'" class="btn btn-info btn-sm"  >';
-                echo   '<span class="glyphicon glyphicon-search"></span>';                
-                echo   '</a>';
-            echo "</div>";
-            echo '</td>';
-        echo '</tr>';
-    }
-    
-    ?>
-    </tbody>
-  </table>
+                        foreach ($listaUsuarios as $usuario) {
+                            echo '<tr>';
+                                echo '<td>';
+                                    echo  $usuario->getNome();
+                                echo '</td>';
+                                echo '<td>';
+                                echo "<div class='btn-group'>";
+                                    echo   '<a href="dados.php?id='.$usuario->getId().'" class="btn btn-info btn-sm"  >';
+                                    echo   '<span class="glyphicon glyphicon-search"></span>';                
+                                    echo   '</a>';
+                                echo "</div>";
+                                echo '</td>';
+                            echo '</tr>';
+                        }
+
+                        ?>
+                        </tbody>
+                      </table>
+                  
+                    </div>
+           </div>
+
+   
                  
             
 <!-- Modal de visualiziação  -->
