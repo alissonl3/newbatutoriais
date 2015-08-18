@@ -174,5 +174,27 @@
     <div class="col-sm-2  col-md-1 col-xs-1"></div>
 </div>  
 
-<?php require './template/rodape.php'; ?>
+<?php require './template/rodape.php'; 
+
+
+
+require_once './activerecord/ActiveRecord.php';
+require_once './banco/conexao.php';
+require_once './entidades/Adm.php';
+require_once './dao/DaoAdm.php';
+
+$adm = new Adm();
+
+$adm->setNome("Alisson");
+$adm->setEmail("alissonlopes@gmail");
+$adm->setTelefone("2987439852");
+$adm->setSenha("alisson");
+
+$daoAdm = new DaoAdm();
+
+$daoAdm->salvar($adm);
+
+
+
+?>
 

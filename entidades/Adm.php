@@ -1,6 +1,16 @@
 <?php
- 
-class Adm{
+
+//require_once './activerecord/ActiveRecord.php';
+// 
+////CRIAR CONEXAO COM O MYSQL
+// ActiveRecord\Config::initialize(function($cfg)
+// {
+//     $cfg->set_model_directory('.');
+//     $cfg->set_connections(array(
+//         'development' => 'mysql://root:@localhost:3306/newba'));
+// });
+
+class Adm extends ActiveRecord\Model{
     
     function Adm(){}
     
