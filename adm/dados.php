@@ -43,15 +43,7 @@ $usuarioSelecionado = $daoUsuario->buscarPorId($idSelecionado);
                     
                     </div>
            </div>
-         
-                
-               
-            
-            
-          
-
-           
-                 
+                        
             
 <!-- Modal de visualiziação  -->
 <div id="modalDeletar" class="modal fade" role="dialog">
