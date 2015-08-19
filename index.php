@@ -25,15 +25,15 @@
                             </center>
                       
                         <br />
-                        
+                        <hr />
                         <div style="text-align: justify;">
                          Newba Tutoriais e Dicas é um canal que tem o intuito de auxiliar pessoas
                nas diversar áreas da informática, com tutoriais básicos de instalações, recomendações,
                designer, programação, etc. Venha fazer parte dessa família você também, inscreva-se em nosso canal
                clicando no icone do youtube.
-                        </div>
-                        
+                        </div>                       
                         <br />
+                        <hr />
                         <center>
                             <a href="https://www.youtube.com/user/newbatutoriais" target="_blank"> <img src="resources/img/youtube.png" alt="Canal do Newba Tutoriais e Dicas" class="img-responsive" /> </a>
                         </center>
@@ -58,16 +58,20 @@
                     </div>
                     <div class="panel-body">
                         <center>
-                        <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHOryBGrOV-dQ8Z4EpjQtup8Mc8G2p_FcKgUW1qZe1DXkrd2Y" alt="Newba Tutoriais e Dicas" class="img-responsive" />
-
-                        <br/>
-                         Video tutorial ensinando como configurar o windows 10.
-                        <br />
-
-                        <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-info">Visualizar</a>
-                        </center>
+                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe  src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br/>
+                <hr />
+                 Video tutorial ensinando como configurar o windows 10.
+                <br />
+                <hr/>
+                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-danger">Youtube</a>
+                </center>
                     </div>
                 </div>
+                
+                
                 
                 </div>
             <div class="col-md-6 col-sm-6 col-xs-6" >
@@ -78,14 +82,16 @@
                     </div>
                     <div class="panel-body">
                         <center>
-                        <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHOryBGrOV-dQ8Z4EpjQtup8Mc8G2p_FcKgUW1qZe1DXkrd2Y" alt="Newba Tutoriais e Dicas" class="img-responsive" />
-
-                        <br/>
-                         Video tutorial ensinando como configurar o windows 10.
-                        <br />
-
-                        <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-info">Visualizar</a>
-                        </center>
+                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe  src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br/>
+                <hr />
+                 Video tutorial ensinando como configurar o windows 10.
+                <br />
+                <hr/>
+                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-danger">Youtube</a>
+                </center>
                     </div>
                 </div>
                 
@@ -111,13 +117,15 @@
             </div>
             <div class="panel-body">
                 <center>
-                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHOryBGrOV-dQ8Z4EpjQtup8Mc8G2p_FcKgUW1qZe1DXkrd2Y" alt="Newba Tutoriais e Dicas" class="img-responsive" />
-
+                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe  src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <br/>
+                <hr />
                  Video tutorial ensinando como configurar o windows 10.
                 <br />
-
-                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-info">Visualizar</a>
+                <hr/>
+                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-danger">Youtube</a>
                 </center>
             </div>
         </div>
@@ -132,13 +140,15 @@
             </div>
             <div class="panel-body">
                 <center>
-                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHOryBGrOV-dQ8Z4EpjQtup8Mc8G2p_FcKgUW1qZe1DXkrd2Y" alt="Newba Tutoriais e Dicas" class="img-responsive" />
-
+                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe  src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <br/>
+                <hr />
                  Video tutorial ensinando como configurar o windows 10.
                 <br />
-
-                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-info">Visualizar</a>
+                <hr/>
+                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-danger">Youtube</a>
                 </center>
             </div>
         </div>
@@ -153,13 +163,15 @@
             </div>
             <div class="panel-body">
                 <center>
-                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHOryBGrOV-dQ8Z4EpjQtup8Mc8G2p_FcKgUW1qZe1DXkrd2Y" alt="Newba Tutoriais e Dicas" class="img-responsive" />
-
+                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe  src="https://www.youtube.com/embed/sTv3aJROGg4" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <br/>
+                <hr />
                  Video tutorial ensinando como configurar o windows 10.
                 <br />
-
-                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-info">Visualizar</a>
+                <hr/>
+                <a href="https://www.youtube.com/watch?v=VXv0EIIqo90&feature=youtu.be" target="_blank" class="btn btn-danger">Youtube</a>
                 </center>
             </div>
         </div>
