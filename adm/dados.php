@@ -12,7 +12,7 @@ if(isset($_GET['id'])){
     $idSelecionado = $_GET['id'];
 }
 
-$usuarioSelecionado = $daoUsuario->buscarPorId($idSelecionado);
+$videoSelecionado = $daoUsuario->buscarPorId($idSelecionado);
 
 ?>
 
@@ -28,9 +28,9 @@ $usuarioSelecionado = $daoUsuario->buscarPorId($idSelecionado);
                         <h3 class="panel-title">Dados</h3>
                     </div>
                     <div class="panel-body">
-                     <label>Nome: <?php echo $usuarioSelecionado->getNome() ?> </label><br />
-                     <label>Email: <?php echo $usuarioSelecionado->getEmail() ?> </label><br />
-                     <label>Telefone: <?php echo $usuarioSelecionado->getTelefone() ?> </label><br />
+                     <label>Nome: <?php echo $videoSelecionado->getNome() ?> </label><br />
+                     <label>Email: <?php echo $videoSelecionado->getEmail() ?> </label><br />
+                     <label>Telefone: <?php echo $videoSelecionado->getTelefone() ?> </label><br />
                 
                 <center>
                  <div class="btn-group">
@@ -61,7 +61,7 @@ $usuarioSelecionado = $daoUsuario->buscarPorId($idSelecionado);
       </div>
       <div class="modal-body">
           <div class="jumbotron" style=" background: white;">
-              <label>Tem certeza que deseja excluir <?php echo $usuarioSelecionado->getNome() ?>?</label>
+              <label>Tem certeza que deseja excluir <?php echo $videoSelecionado->getNome() ?>?</label>
               <br />
               <br />
               <center>
@@ -121,7 +121,7 @@ $usuarioSelecionado = $daoUsuario->buscarPorId($idSelecionado);
           }
           else{
               
-              echo "<p>O usuário ".$usuarioSelecionado->getNome()." ainda não respondeu o formulário</p>";
+              echo "<p>O usuário ".$videoSelecionado->getNome()." ainda não respondeu o formulário</p>";
           }
           
           ?>
@@ -166,7 +166,7 @@ if(isset($_GET['deletar'])){
        try{
       
        
-       $daoUsuario->deletar($usuarioSelecionado->getId());
+       $daoUsuario->deletar($videoSelecionado->getId());
        
        echo "<script type='text/javascript'>";
     

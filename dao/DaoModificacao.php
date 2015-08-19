@@ -121,7 +121,7 @@ class DaoModificacao{
             $p_sql -> bindValue(":id", $id);
             $p_sql->execute();
             
-             return $this->populaUsuario($p_sql->fetch(PDO::FETCH_ASSOC));
+             return $this->populaModificacao($p_sql->fetch(PDO::FETCH_ASSOC));
            
               }       
         catch (Exception $e){

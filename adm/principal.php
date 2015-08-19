@@ -35,10 +35,10 @@
                      <center>
                          <img  src="../resources/img/formu.png" alt="Criar" class="img-responsive" />
                         <br/>
-                       Criação de paginas
+                        Adicionar novos videos
                        <br/>
                        <br/>
-                       <a href="#" class="btn btn-info btn-lg">Criar</a>
+                       <a href="#" class="btn btn-info btn-lg">Adicionar</a>
                        
                      </center>
                     </div>

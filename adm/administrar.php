@@ -1,14 +1,43 @@
 <?php require '../template/topoadm.php'; 
 
 include_once  '../dao/DaoAdm.php';
+include_once '../dao/DaoModificacao.php';
 include_once '../entidades/Adm.php';
+include_once '../entidades/Modificacao.php';
 include_once '../banco/Conexao.php';
 
 $daoUsuario = new DaoAdm();
+$daoModificacao = new DaoModificacao();
 
 $listaUsuarios = $daoUsuario->buscarTodos();
 
+$listaVideos = $daoModificacao->buscarTodos();
 ?>
+
+
+<script type="text/javascript">
+$(document).ready(function (){
+    
+    $("#tabelaAdm").hide();
+    $("#tabelaVideo").hide();
+
+    
+    $("#btnAdministradores").click(function (){
+       $("#tabelaAdm").toggle();
+       $("#tabelaVideo").hide();
+    });
+    
+    $("#btnVideo").click(function (){
+       $("#tabelaAdm").hide();
+       $("#tabelaVideo").toggle();
+    });
+    
+   
+    
+    
+    
+});
+</script>
 
 
 <!-- Pagina do conteudo -->
@@ -16,8 +45,34 @@ $listaUsuarios = $daoUsuario->buscarTodos();
     <div class="col-md-2 col-sm-2 col-xs-2"></div>
     <div class="col-md-8 col-sm-8 col-xs-8" >
     <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
-            
-         <div class="panel panel-primary">
+        
+        
+        <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Opções</h3>
+                    </div>
+            <div class="panel-body">
+                Selecione uma das opções a seguir:
+                <hr />
+                <center>
+                    <div class="btn-group">
+                        <button id="btnAdministradores" type="button" class="btn btn-danger btn-lg">
+                    <span class="glyphicon glyphicon-search"></span>               
+                        Administradores                      
+                    </button> 
+                        <button id="btnVideo" type="button" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-search"></span>               
+                        Videos                       
+                    </button> 
+                    </div>
+                </center>
+                
+            </div>
+        </div>
+        
+        
+        <div id="tabelaAdm">    
+        <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Administradores</h3>
                     </div>
@@ -55,8 +110,58 @@ $listaUsuarios = $daoUsuario->buscarTodos();
                   
                     </div>
            </div>
+           </div>
+        
+        
+       
+        
+        
+        <div id="tabelaVideo">    
+        <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Videos</h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                         <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Titutlo</th>
+                            <th>Tipo</th>
+                            <th>Ação</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <?php 
 
-   
+
+                        foreach ($listaVideos as $video) {
+                            echo '<tr>';
+                                echo '<td>';
+                                    echo  $video->getTitulo();
+                                echo '</td>';
+                                 echo '<td>';
+                                    echo  $video->getTipo();
+                                echo '</td>';
+                                echo '<td>';
+                                echo "<div class='btn-group'>";
+                                    echo   '<a href="videos.php?id='.$video->getId().'" class="btn btn-info btn-sm"  >';
+                                    echo   '<span class="glyphicon glyphicon-search"></span>';                
+                                    echo   '</a>';
+                                echo "</div>";
+                                echo '</td>';
+                            echo '</tr>';
+                        }
+
+                        ?>
+                        </tbody>
+                      </table>
+                  
+                    </div>
+           </div>
+           </div>
+           
+       
                  
             
 <!-- Modal de visualiziação  -->
