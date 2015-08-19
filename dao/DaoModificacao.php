@@ -159,13 +159,13 @@ class DaoModificacao{
         
            try{
             
-            $sql = "SELECT * FROM modificacao ORDER BY titulo";
+            $sql = "SELECT * FROM modificacao ORDER BY id";
             $result = $this->pdo->query($sql);
             $lista = $result->fetchAll(PDO::FETCH_ASSOC);
             $f_lista = array();
             
             foreach ($lista as $l){
-                $f_lista[] = $this->populaUsuario($l);
+                $f_lista[] = $this->populaModificacao($l);
             }
            
             return $f_lista;
