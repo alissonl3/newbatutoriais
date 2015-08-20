@@ -142,7 +142,29 @@ class DaoModificacao{
             $p_sql -> bindValue(":titulo", $titulo);
             $p_sql->execute();
             
-             return $this->populaUsuario($p_sql->fetch(PDO::FETCH_ASSOC));
+             return $this->populaModificacao($p_sql->fetch(PDO::FETCH_ASSOC));
+           
+              }       
+        catch (Exception $e){
+     
+     print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde."; 
+     
+     
+ }
+    
+     } 
+     
+     
+      public function buscarPorAdm($idAdm){
+        
+           try{
+            
+            $sql = "SELECT * FROM modificacao WHERE idAdm = :idAdm";
+            $p_sql = $this->pdo->prepare($sql);
+            $p_sql -> bindValue(":idAdm", $idAdm);
+            $p_sql->execute();
+            
+             return $this->populaModificacao($p_sql->fetch(PDO::FETCH_ASSOC));
            
               }       
         catch (Exception $e){
@@ -184,8 +206,8 @@ class DaoModificacao{
         $modi ->setId($row['id']);
         $modi ->setTitulo($row['titulo']);
         $modi ->setTexto($row['texto']);
-        $modi ->setTipo($row['tipo']);
         $modi ->setVideo($row['video']);
+        $modi ->setTipo($row['tipo']);       
         $modi ->setHtml($row['html']);
         $modi ->setIdAdm($row['idAdm']);
 

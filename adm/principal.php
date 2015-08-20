@@ -7,7 +7,7 @@
         
     <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
     <div class="row">
-    <div class="col-md-6 col-sm-12 col-xs-6">
+    <div class="col-md-12 col-sm-12 col-xs-12">
        <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Administrar</h3>
@@ -24,27 +24,7 @@
                     </div>
        </div>     
     </div>
- 
-    <div class="col-md-6 col-sm-12 col-xs-6" >
-        
-        <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Criar</h3>
-                    </div>
-                    <div class="panel-body">
-                     <center>
-                         <img  src="../resources/img/formu.png" alt="Criar" class="img-responsive" />
-                        <br/>
-                        Adicionar novos videos
-                       <br/>
-                       <br/>
-                       <a href="#" class="btn btn-info btn-lg">Adicionar</a>
-                       
-                     </center>
-                    </div>
-       </div> 
-        
-    </div>
+
     </div> 
     </div>
         

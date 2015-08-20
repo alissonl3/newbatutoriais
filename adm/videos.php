@@ -15,10 +15,10 @@ if(isset($_GET['id'])){
     $idSelecionado = $_GET['id'];
 }
 
-$videoSelecionado = new Modificacao();
-$videoSelecionado = $daoModificacao->buscarPorId($idSelecionado);
+$admSelecionado = new Modificacao();
+$admSelecionado = $daoModificacao->buscarPorId($idSelecionado);
 
-$autor = $daoAdm->buscarPorId($videoSelecionado->getIdAdm())->getNome();
+$autor = $daoAdm->buscarPorId($admSelecionado->getIdAdm())->getNome();
 
 ?>
 
@@ -34,8 +34,8 @@ $autor = $daoAdm->buscarPorId($videoSelecionado->getIdAdm())->getNome();
                         <h3 class="panel-title">Dados</h3>
                     </div>
                     <div class="panel-body">
-                     <label>Titulo: <?php echo $videoSelecionado->getTitulo() ?></label><br />
-                     <label>Tipo: <?php echo $videoSelecionado->getTipo() ?></label><br />
+                     <label>Titulo: <?php echo $admSelecionado->getTitulo() ?></label><br />
+                     <label>Tipo: <?php echo $admSelecionado->getTipo() ?></label><br />
                      <label>Administrador: <?php echo $autor ?> </label><br />
                      
                      <hr />
@@ -69,7 +69,7 @@ $autor = $daoAdm->buscarPorId($videoSelecionado->getIdAdm())->getNome();
       </div>
       <div class="modal-body">
           <div class="jumbotron" style=" background: white;">
-              <label>Tem certeza que deseja excluir <?php echo $videoSelecionado->getTitulo() ?>?</label>
+              <label>Tem certeza que deseja excluir <?php echo $admSelecionado->getTitulo() ?>?</label>
               <br />
               <br />
               <center>
@@ -116,28 +116,28 @@ $autor = $daoAdm->buscarPorId($videoSelecionado->getIdAdm())->getNome();
                 <input type="hidden" id="atualizar" name="atualizar" value="sim" />
                     <div class="form-group">
                         <label  for="titulo">Titulo:</label>
-                        <input type="text" value="<?php echo $videoSelecionado->getTitulo() ?>" class="form-control" id="titulo" name="titulo" />
+                        <input type="text" value="<?php echo $admSelecionado->getTitulo() ?>" class="form-control" id="titulo" name="titulo" />
                     </div>
                     <div class="form-group">
                         <label  for="texto">Texto:</label>
-                        <input type="text" value="<?php echo $videoSelecionado->getTexto() ?>" class="form-control" id="texto" name="texto" />
+                        <input type="text" value="<?php echo $admSelecionado->getTexto() ?>" class="form-control" id="texto" name="texto" />
                     </div>
                     <div class="form-group">
                         <label  for="url">Url Video:</label>
-                        <input type="url" value="<?php echo $videoSelecionado->getVideo() ?>" class="form-control" id="url" name="url" />
+                        <input type="url" value="<?php echo $admSelecionado->getVideo() ?>" class="form-control" id="url" name="url" />
                     </div>
                     <div class="form-group">
                         <label  for="tipo">Tipo:</label>
                         <div class="radio">
                             <label><input  type="radio" name="tipo" <?php 
-                            if($videoSelecionado->getTipo()==="topvisitados"){
+                            if($admSelecionado->getTipo()==="topvisitados"){
                                 echo "checked='true'";
                             }
                               ?> value="topvisitados">Top visitados</label>
                         </div>
                         <div class="radio">
                             <label><input type="radio" name="tipo" <?php 
-                            if($videoSelecionado->getTipo()==="lancamentos"){
+                            if($admSelecionado->getTipo()==="lancamentos"){
                                 echo "checked='true'";
                             }
                               ?> value="lancamentos">Lancamentos</label>
@@ -197,7 +197,7 @@ if(isset($_GET['deletar'])){
        try{
       
        
-       $daoModificacao->deletar($videoSelecionado->getId());
+       $daoModificacao->deletar($admSelecionado->getId());
        
        echo "<script type='text/javascript'>";
     
@@ -253,8 +253,8 @@ if(isset($_GET['atualizar'])){
                $novoVideo->setTipo($_GET["tipo"]);
            }
            
-           $novoVideo->setIdAdm($videoSelecionado->getIdAdm());
-           $novoVideo->setHtml($videoSelecionado->getHtml());
+           $novoVideo->setIdAdm($admSelecionado->getIdAdm());
+           $novoVideo->setHtml($admSelecionado->getHtml());
       
        
        $daoModificacao->atualizar($novoVideo);

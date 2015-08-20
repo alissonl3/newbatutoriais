@@ -1,18 +1,25 @@
 <?php require '../template/topoadm.php'; 
 
 include_once  '../dao/DaoAdm.php';
+include_once '../dao/DaoModificacao.php';
 include_once '../entidades/Adm.php';
+include_once '../entidades/Modificacao.php';
 include_once '../banco/Conexao.php';
 
 
 $daoUsuario = new DaoAdm();
+$daoModi = new DaoModificacao();
+
 
 
 if(isset($_GET['id'])){
     $idSelecionado = $_GET['id'];
 }
 
-$videoSelecionado = $daoUsuario->buscarPorId($idSelecionado);
+$admSelecionado = $daoUsuario->buscarPorId($idSelecionado);
+
+//buscar todos os videos de acordo com o administrador
+$videosDoUsuario = $daoModi->buscarPorAdm($idSelecionado);
 
 ?>
 
@@ -28,9 +35,9 @@ $videoSelecionado = $daoUsuario->buscarPorId($idSelecionado);
                         <h3 class="panel-title">Dados</h3>
                     </div>
                     <div class="panel-body">
-                     <label>Nome: <?php echo $videoSelecionado->getNome() ?> </label><br />
-                     <label>Email: <?php echo $videoSelecionado->getEmail() ?> </label><br />
-                     <label>Telefone: <?php echo $videoSelecionado->getTelefone() ?> </label><br />
+                     <label>Nome: <?php echo $admSelecionado->getNome() ?> </label><br />
+                     <label>Email: <?php echo $admSelecionado->getEmail() ?> </label><br />
+                     <label>Telefone: <?php echo $admSelecionado->getTelefone() ?> </label><br />
                 
                 <center>
                  <div class="btn-group">
@@ -61,7 +68,7 @@ $videoSelecionado = $daoUsuario->buscarPorId($idSelecionado);
       </div>
       <div class="modal-body">
           <div class="jumbotron" style=" background: white;">
-              <label>Tem certeza que deseja excluir <?php echo $videoSelecionado->getNome() ?>?</label>
+              <label>Tem certeza que deseja excluir <?php echo $admSelecionado->getNome() ?>?</label>
               <br />
               <br />
               <center>
@@ -106,22 +113,35 @@ $videoSelecionado = $daoUsuario->buscarPorId($idSelecionado);
         
           <?php 
           
-          if($verificacaoFormulario === true){
+          if(count($videosDoUsuario) > 0){
               
-              echo " <fieldset>
-                    <legend>Dados pessoais</legend>
-                    <label>1 - Ano de Conclusão:</label><br />"
-                    ."<label style='color:graytext;'>R: ". $formularioSelecionado->getAnoConclusao() ." </label><br />" 
-                    ."<label>2 - Sementre:</label><br />"
-                    ."<label style='color:graytext;'>R: ". $formularioSelecionado->getSemestre() ." </label><br />" 
-                   ."</fieldset>"
-                   ."<hr />";
-             
-              
+              echo '<div class="panel panel-primary">
+                    <div class="panel-heading">
+                    <h3 class="panel-title">';
+                      echo count($videosDoUsuario);
+                        echo '</h3>
+                              </div>
+                              <div class="panel-body">
+                               <center>';
+                        
+                        foreach ($videosDoUsuario as $video){
+                          
+                            echo 'Tituto: '.$video->getTitulo();
+                            echo '<br />';
+                            echo 'Texto: '.$video->getTexto();
+                            echo '<br />';
+                            echo '<hr />';
+                            
+                        }
+  
+                        echo "</center>
+                              </div>
+                              </div>";
+       
           }
           else{
               
-              echo "<p>O usuário ".$videoSelecionado->getNome()." ainda não respondeu o formulário</p>";
+              echo "<p>O usuário ".$admSelecionado->getNome()." ainda não possui histórico!</p>";
           }
           
           ?>
@@ -166,7 +186,7 @@ if(isset($_GET['deletar'])){
        try{
       
        
-       $daoUsuario->deletar($videoSelecionado->getId());
+       $daoUsuario->deletar($admSelecionado->getId());
        
        echo "<script type='text/javascript'>";
     
