@@ -116,7 +116,7 @@ function retornarEmbed($url){
             <hr />
             
             <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6" >
+            <div class="col-md-6 col-sm-12 col-xs-12" >
                 <?php 
                 
                 foreach ($listaTopPrimeiraColuna as $top){
@@ -149,7 +149,7 @@ function retornarEmbed($url){
                 ?>
                
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-6" >
+            <div class="col-md-6 col-sm-12 col-xs-12" >
                 
                 <?php 
                 
@@ -195,7 +195,7 @@ function retornarEmbed($url){
             
             <div class="row">
 
-    <div class="col-md-4 col-sm-4 col-xs-4" >
+    <div class="col-md-4 col-sm-12 col-xs-12" >
 
          <?php 
                 
@@ -229,7 +229,7 @@ function retornarEmbed($url){
 
     </div>
 
-    <div class="col-md-4 col-sm-4 col-xs-4" >
+    <div class="col-md-4 col-sm-12 col-xs-12" >
 
         <?php 
                 
@@ -263,7 +263,7 @@ function retornarEmbed($url){
 
     </div>
 
-    <div class="col-md-4 col-sm-4 col-xs-4" >
+    <div class="col-md-4 col-sm-12 col-xs-12" >
 
          <?php 
                 
