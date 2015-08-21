@@ -5,7 +5,7 @@
     <div class="col-md-1 col-sm-1 col-xs-1"></div>
     <div class="col-md-10 col-sm-10 col-xs-10">
         
-    <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
+    <div class="jumbotron" style=" background: white; " >
     <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
        <div class="panel panel-primary">

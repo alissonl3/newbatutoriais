@@ -16,7 +16,7 @@ if(isset($_GET['id'])){
     $idSelecionado = $_GET['id'];
 }
 
-$admSelecionado = $daoUsuario->buscarPorId($idSelecionado);
+$videoNovo = $daoUsuario->buscarPorId($idSelecionado);
 
 //buscar todos os videos de acordo com o administrador
 $videosDoUsuario = $daoModi->buscarPorAdm($idSelecionado);
@@ -28,16 +28,16 @@ $videosDoUsuario = $daoModi->buscarPorAdm($idSelecionado);
 <div class="row" style="margin-top: 1%; margin-bottom: 1%;">
     <div class="col-md-2 col-sm-2 col-xs-2"></div>
     <div class="col-md-8 col-sm-8 col-xs-8" >
-        <div class="jumbotron" style=" background: white; border: 2px greenyellow solid;">
+        <div class="jumbotron" style=" background: white;">
             
            <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Dados</h3>
                     </div>
                     <div class="panel-body">
-                     <label>Nome: <?php echo $admSelecionado->getNome() ?> </label><br />
-                     <label>Email: <?php echo $admSelecionado->getEmail() ?> </label><br />
-                     <label>Telefone: <?php echo $admSelecionado->getTelefone() ?> </label><br />
+                     <label>Nome: <?php echo $videoNovo->getNome() ?> </label><br />
+                     <label>Email: <?php echo $videoNovo->getEmail() ?> </label><br />
+                     <label>Telefone: <?php echo $videoNovo->getTelefone() ?> </label><br />
                 
                 <center>
                  <div class="btn-group">
@@ -68,7 +68,7 @@ $videosDoUsuario = $daoModi->buscarPorAdm($idSelecionado);
       </div>
       <div class="modal-body">
           <div class="jumbotron" style=" background: white;">
-              <label>Tem certeza que deseja excluir <?php echo $admSelecionado->getNome() ?>?</label>
+              <label>Tem certeza que deseja excluir <?php echo $videoNovo->getNome() ?>?</label>
               <br />
               <br />
               <center>
@@ -117,8 +117,7 @@ $videosDoUsuario = $daoModi->buscarPorAdm($idSelecionado);
               
               echo '<div class="panel panel-primary">
                     <div class="panel-heading">
-                    <h3 class="panel-title">';
-                      echo count($videosDoUsuario);
+                    <h3 class="panel-title">Seus videos';                      
                         echo '</h3>
                               </div>
                               <div class="panel-body">
@@ -126,9 +125,9 @@ $videosDoUsuario = $daoModi->buscarPorAdm($idSelecionado);
                         
                         foreach ($videosDoUsuario as $video){
                           
-                            echo 'Tituto: '.$video->getTitulo();
+                            echo '<b>Tituto:</b> '.$video->getTitulo();
                             echo '<br />';
-                            echo 'Texto: '.$video->getTexto();
+                            echo '<b>Texto:</b> '.$video->getTexto();
                             echo '<br />';
                             echo '<hr />';
                             
@@ -141,7 +140,7 @@ $videosDoUsuario = $daoModi->buscarPorAdm($idSelecionado);
           }
           else{
               
-              echo "<p>O usuário ".$admSelecionado->getNome()." ainda não possui histórico!</p>";
+              echo "<p>O usuário ".$videoNovo->getNome()." ainda não possui histórico!</p>";
           }
           
           ?>
@@ -186,12 +185,12 @@ if(isset($_GET['deletar'])){
        try{
       
        
-       $daoUsuario->deletar($admSelecionado->getId());
+       $daoUsuario->deletar($videoNovo->getId());
        
        echo "<script type='text/javascript'>";
     
             echo "alert('Administrador deletado com sucesso!');";
-            echo "location.href='http://localhost/newbatutoriais/adm/gerenciar.php';";
+            echo "location.href='http://localhost/newbatutoriais/adm/administrar.php';";
 
        echo "</script>";
        
@@ -204,7 +203,7 @@ if(isset($_GET['deletar'])){
        echo "<script type='text/javascript'>";
     
             echo "alert('Erro ao tentar deletar usuario!');";
-            echo "location.href='http://localhost/newbatutoriais/adm/gerenciar.php';";
+            echo "location.href='http://localhost/newbatutoriais/adm/administrar.php';";
 
        echo "</script>";
            

@@ -11,23 +11,23 @@ include_once '../banco/Conexao.php';
 try{
            
            if(isset($_POST["titulo"])){
-               $admSelecionado->setTitulo($_POST["titulo"]);
+               $videoNovo->setTitulo($_POST["titulo"]);
            }
            
            if(isset($_POST["texto"])){
-               $admSelecionado->setTitulo($_POST["texto"]);
+               $videoNovo->setTitulo($_POST["texto"]);
            }
            
            if(isset($_POST["url"])){
-               $admSelecionado->setTitulo($_POST["url"]);
+               $videoNovo->setTitulo($_POST["url"]);
            }
            
            if(isset($_POST["tipo"])){
-               $admSelecionado->setTipo($_POST["tipo"]);
+               $videoNovo->setTipo($_POST["tipo"]);
            }
       
        
-       $daoModificacao->atualizar($admSelecionado->getId());
+       $daoModificacao->atualizar($videoNovo->getId());
        
        echo "<script type='text/javascript'>";
     

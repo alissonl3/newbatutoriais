@@ -76,7 +76,7 @@ function retornarEmbed($url){
        
         
         <!-- COMENTARIO -->
-        <div class="jumbotron" style="  border: 2px #0085C5 solid; " >
+        <div class="jumbotron" style="background: white;" >
             
             <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -110,7 +110,7 @@ function retornarEmbed($url){
                 
         </div>
         
-        <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
+        <div class="jumbotron" style="background: white;">
             <center><h2 style="color: graytext;">Top visitados</h2></center>
             
             <hr />
@@ -187,7 +187,7 @@ function retornarEmbed($url){
         </div>
     
     
-         <div class="jumbotron" style="  border: 2px #0085C5 solid; ">
+         <div class="jumbotron" style="background: white;">
              
              <center><h2 style="color: graytext;">Lançamentos</h2></center>
             

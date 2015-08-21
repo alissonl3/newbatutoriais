@@ -32,30 +32,33 @@ class DaoModificacao{
     public function inserir(Modificacao $modi){
         try{
             
-            $sql = "INSERT INTO modificacao("
-                    . "titutlo,"
+            
+            
+            $sql = "INSERT INTO modificacao ("
+                    . "titulo,"
                     . "texto,"
                     . "video,"
                     . "tipo,"
                     . "html,"
                     . "idAdm"
                     . ") VALUES ("
-                    . ":titutlo,"
+                    . ":titulo,"
                     . ":texto,"
                     . ":video,"
-                    . ":tipo"
-                    . ":html"
-                    . ":idAdm";
+                    . ":tipo,"
+                    . ":html,"
+                    . ":idAdm)";
             
             $p_sql = $this->pdo->prepare($sql);
             
-            $p_sql -> bindValue(":titutlo", $modi->getTitulo());
+            $p_sql -> bindValue(":titulo", $modi->getTitulo());
             $p_sql -> bindValue(":texto", $modi->getTexto());
             $p_sql -> bindValue(":video", $modi->getVideo());
             $p_sql -> bindValue(":tipo", $modi->getTipo());
             $p_sql -> bindValue(":html", $modi->getHtml());
             $p_sql -> bindValue(":idAdm", $modi->getIdAdm());
           
+   
             
             return $p_sql->execute();
          
@@ -73,7 +76,7 @@ class DaoModificacao{
         try { 
             $sql = "UPDATE modificacao SET titulo = :titulo, texto = :texto, video = :video, tipo = :tipo WHERE id = :id"; 
             $p_sql = $this->pdo->prepare($sql); 
-            $p_sql -> bindValue(":titutlo", $modi->getTitulo());
+            $p_sql -> bindValue(":titulo", $modi->getTitulo());
             $p_sql -> bindValue(":texto", $modi->getTexto());
             $p_sql -> bindValue(":video", $modi->getVideo());
             $p_sql -> bindValue(":tipo", $modi->getTipo());
@@ -81,6 +84,7 @@ class DaoModificacao{
             return $p_sql->execute(); 
             
         } catch (Exception $e) { 
+            
             print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde."; 
             
         } 
@@ -163,8 +167,15 @@ class DaoModificacao{
             $p_sql = $this->pdo->prepare($sql);
             $p_sql -> bindValue(":idAdm", $idAdm);
             $p_sql->execute();
+            $lista = $p_sql->fetchAll(PDO::FETCH_ASSOC);
+            $f_lista = array();
             
-             return $this->populaModificacao($p_sql->fetch(PDO::FETCH_ASSOC));
+            foreach ($lista as $l){
+                $f_lista[] = $this->populaModificacao($l);
+            }
+           
+            
+             return $f_lista;
            
               }       
         catch (Exception $e){

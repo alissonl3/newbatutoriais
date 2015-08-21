@@ -20,6 +20,7 @@
         }
 
         $logado = $_SESSION['nome'];
+        $idAdm = $_SESSION['id'];
         
         ?>
 
@@ -47,9 +48,77 @@
 
                                 <ul class="nav navbar-nav navbar-right" >
                                     <li><a href="#"><span class="label" style="color: black;"><?php echo "Seja Bem vindo $logado"; ?></span></a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-share" data-toggle="modal"  data-target="#modalVideo" style="color: teal;">Adicionar Video</span></a></li>
                                     <li><a href="../visao/logout.php"><span class="glyphicon glyphicon-log-out" style="color: teal;">Sair</span></a></li>            
                                 </ul>
                             </div>
+                            
+                            
+                                 <!-- Modal -->
+    <div id="modalVideo" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Adicionar</h4>
+          </div>
+          <div class="modal-body">
+              
+              <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Dados</h3>
+            </div>
+            <div class="panel-body">
+                <form action="../visao/adicionarVideo.php" method="POST" role="form" >
+
+                    <input type="hidden" value="<?php echo $_SERVER['PHP_SELF'] ?>" name="urlatual" id="urlatual" />
+                    <input type="hidden" value="<?php echo $idAdm ?>" name="idadm" id="idadm" />
+                    
+                    <div class="form-group">
+                        <label  for="titulo">Titulo:</label>
+                        <input type="text" required="true" placeholder="Insere o titulo" class="form-control" id="titulo" name="titulo" />
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Texto:</label>
+                        <textarea  required="true" rows="3" class="form-control" id="texto" name="texto" ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="url">Url:</label>
+                        <input type="text" required="true" placeholder="Insere a url do video" class="form-control" id="url" name="url" />
+                    </div>
+                    <div class="form-group">
+                        <label  for="tipo">Tipo:</label>
+                        <div class="radio">
+                            <label><input  type="radio" name="tipo" value="topvisitados">Top Visitados</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="tipo" value="lancamentos">Lançamentos</label>
+                        </div>
+                    </div>
+                    <center>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                Adicionar</button> 
+                            <button type="reset" class="btn btn-danger btn-lg">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                Limpar</button>                        
+                        </div>
+                    </center>
+                </form>              
+            </div>
+        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+                            
+                            
 
                         </div>
                     </nav>       

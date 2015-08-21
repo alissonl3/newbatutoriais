@@ -26,10 +26,12 @@ $user = $dao->buscarPorEmailSenha($email, $senha);
 if($user->getId() > 0){
   
     //ENVIO DE DADOS PELA SEÇÃO
+    $_SESSION['id'] = $user->getId();
     $_SESSION['nome'] = $user->getNome();
     $_SESSION['telefone'] = $user->getTelefone(); 
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
+    
       
     echo "<script type='text/javascript'>";
     

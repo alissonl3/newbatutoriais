@@ -15,10 +15,10 @@ if(isset($_GET['id'])){
     $idSelecionado = $_GET['id'];
 }
 
-$admSelecionado = new Modificacao();
-$admSelecionado = $daoModificacao->buscarPorId($idSelecionado);
+$videoNovo = new Modificacao();
+$videoNovo = $daoModificacao->buscarPorId($idSelecionado);
 
-$autor = $daoAdm->buscarPorId($admSelecionado->getIdAdm())->getNome();
+$autor = $daoAdm->buscarPorId($videoNovo->getIdAdm())->getNome();
 
 ?>
 
@@ -27,15 +27,15 @@ $autor = $daoAdm->buscarPorId($admSelecionado->getIdAdm())->getNome();
 <div class="row" style="margin-top: 1%; margin-bottom: 1%;">
     <div class="col-md-2 col-sm-2 col-xs-2"></div>
     <div class="col-md-8 col-sm-8 col-xs-8" >
-        <div class="jumbotron" style=" background: white; border: 2px greenyellow solid;">
+        <div class="jumbotron" style=" background: white; ">
             
            <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Dados</h3>
                     </div>
                     <div class="panel-body">
-                     <label>Titulo: <?php echo $admSelecionado->getTitulo() ?></label><br />
-                     <label>Tipo: <?php echo $admSelecionado->getTipo() ?></label><br />
+                     <label>Titulo: <?php echo $videoNovo->getTitulo() ?></label><br />
+                     <label>Tipo: <?php echo $videoNovo->getTipo() ?></label><br />
                      <label>Administrador: <?php echo $autor ?> </label><br />
                      
                      <hr />
@@ -69,7 +69,7 @@ $autor = $daoAdm->buscarPorId($admSelecionado->getIdAdm())->getNome();
       </div>
       <div class="modal-body">
           <div class="jumbotron" style=" background: white;">
-              <label>Tem certeza que deseja excluir <?php echo $admSelecionado->getTitulo() ?>?</label>
+              <label>Tem certeza que deseja excluir <?php echo $videoNovo->getTitulo() ?>?</label>
               <br />
               <br />
               <center>
@@ -116,28 +116,28 @@ $autor = $daoAdm->buscarPorId($admSelecionado->getIdAdm())->getNome();
                 <input type="hidden" id="atualizar" name="atualizar" value="sim" />
                     <div class="form-group">
                         <label  for="titulo">Titulo:</label>
-                        <input type="text" value="<?php echo $admSelecionado->getTitulo() ?>" class="form-control" id="titulo" name="titulo" />
+                        <input type="text" value="<?php echo $videoNovo->getTitulo() ?>" class="form-control" id="titulo" name="titulo" />
                     </div>
                     <div class="form-group">
                         <label  for="texto">Texto:</label>
-                        <input type="text" value="<?php echo $admSelecionado->getTexto() ?>" class="form-control" id="texto" name="texto" />
+                        <input type="text" value="<?php echo $videoNovo->getTexto() ?>" class="form-control" id="texto" name="texto" />
                     </div>
                     <div class="form-group">
                         <label  for="url">Url Video:</label>
-                        <input type="url" value="<?php echo $admSelecionado->getVideo() ?>" class="form-control" id="url" name="url" />
+                        <input type="url" value="<?php echo $videoNovo->getVideo() ?>" class="form-control" id="url" name="url" />
                     </div>
                     <div class="form-group">
                         <label  for="tipo">Tipo:</label>
                         <div class="radio">
                             <label><input  type="radio" name="tipo" <?php 
-                            if($admSelecionado->getTipo()==="topvisitados"){
+                            if($videoNovo->getTipo()==="topvisitados"){
                                 echo "checked='true'";
                             }
                               ?> value="topvisitados">Top visitados</label>
                         </div>
                         <div class="radio">
                             <label><input type="radio" name="tipo" <?php 
-                            if($admSelecionado->getTipo()==="lancamentos"){
+                            if($videoNovo->getTipo()==="lancamentos"){
                                 echo "checked='true'";
                             }
                               ?> value="lancamentos">Lancamentos</label>
@@ -197,12 +197,12 @@ if(isset($_GET['deletar'])){
        try{
       
        
-       $daoModificacao->deletar($admSelecionado->getId());
+       $daoModificacao->deletar($videoNovo->getId());
        
        echo "<script type='text/javascript'>";
     
             echo "alert('Video deletado com sucesso!');";
-            echo "location.href='http://localhost/newbatutoriais/adm/gerenciar.php';";
+            echo "location.href='http://localhost/newbatutoriais/adm/administrar.php';";
 
        echo "</script>";
        
@@ -253,8 +253,8 @@ if(isset($_GET['atualizar'])){
                $novoVideo->setTipo($_GET["tipo"]);
            }
            
-           $novoVideo->setIdAdm($admSelecionado->getIdAdm());
-           $novoVideo->setHtml($admSelecionado->getHtml());
+           $novoVideo->setIdAdm($videoNovo->getIdAdm());
+           $novoVideo->setHtml($videoNovo->getHtml());
       
        
        $daoModificacao->atualizar($novoVideo);

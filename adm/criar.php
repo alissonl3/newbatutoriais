@@ -15,7 +15,7 @@ $listaUsuarios = $daoUsuario->buscarTodos();
 <div class="row" style="margin-top: 1%; margin-bottom: 5%;">
     <div class="col-md-2 col-sm-2 col-xs-2"></div>
     <div class="col-md-8 col-sm-8 col-xs-8" >
-        <div class="jumbotron" style="border: 2px #0085C5 solid;" >
+        <div class="jumbotron" style="background: white;" >
      
             <div class="panel panel-primary">
                     <div class="panel-heading">
