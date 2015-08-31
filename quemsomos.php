@@ -27,7 +27,13 @@
                         
                         <div class="row">
                             
-                            <div class="col-md-4 col-sm-4 col-xs-4" >
+                            <div class="col-md-3 col-sm-3 col-xs-3" >
+                                <center>
+                                    <img  src="resources/img/chaves.png" class="img-responsive" />
+                                </center>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-3 col-xs-3" >
                                   <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h3 class="panel-title">Alisson Lopes</h3>
@@ -42,7 +48,7 @@
                                     </div>             
                             </div>
                             
-                            <div class="col-md-4 col-sm-4 col-xs-4" >
+                            <div class="col-md-3 col-sm-3 col-xs-3" >
                                 <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h3 class="panel-title">Abner Moura</h3>
@@ -58,7 +64,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-md-4 col-sm-4 col-xs-4" >
+                            <div class="col-md-3 col-sm-3 col-xs-3" >
                                <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h3 class="panel-title">Alan Lopes</h3>
